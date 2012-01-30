@@ -1,0 +1,2 @@
+#iPhCU Asset List
+This is a ruby script that polls the current users ~/Library/MobileDevice/Devices folder and extracts all UDIDs, Serial Numbers and Device Names and outputs a CSV file for asset registration.
