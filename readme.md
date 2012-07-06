@@ -10,6 +10,6 @@ When run on the three dummy_device_record files:
 `ruby create_asset_list.rb`
 
 Produces a CSV file containing:  
-`Dummy's iPad,iPad,ABCD1234XYZ,11:22:33:44:55:00  
-Dummy's iPad 2,iPad,AAAFFFCCCDDD,11:22:33:44:55:00  
-Dummy's iPad 3,iPad,111222333444,11:22:33:44:55:00`
+> Dummy's iPad,iPad,ABCD1234XYZ,11:22:33:44:55:00  
+> Dummy's iPad 2,iPad,AAAFFFCCCDDD,11:22:33:44:55:00  
+> Dummy's iPad 3,iPad,111222333444,11:22:33:44:55:00  
