@@ -1,14 +1,13 @@
 #!/usr/bin/env ruby
 
 require 'plist'
-current_user = Dir.home()
-Dir.chdir(current_user + "/Library/MobileDevice/Devices/")
-files = Dir.glob("*.deviceinfo")
+# Create new CSV file
+aFile = File.new(Time.now.strftime("%Y-%m-%d") + "-ios-asset-list.csv", "w+")
+# Move to Devices directory
+Dir.chdir
+Dir.chdir("Library/MobileDevice/Devices")
 
-result = Plist::parse_xml(#{files})
-deviceName = result['deviceName']
-serialNumber = result['deviceSerialNumber']
-puts deviceName
-puts ','
-puts files.serialNumber
-puts $\
+Dir.glob("*.deviceinfo") do |d|
+  darr = Plist::parse_xml(d)
+  aFile.puts darr['deviceName'] + "," + darr['deviceClass'] + "," + darr['deviceSerialNumber'] + "," + darr['deviceWiFiMACAddress']
+end
